@@ -30,6 +30,10 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+// blp added
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import AutoSave from '@ckeditor/ckeditor5-autosave/src/autosave';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -57,6 +61,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation
+	,Alignment  // blp added
+	,AutoSave // blp added
 ];
 
 // Editor configuration.
@@ -65,6 +71,7 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'alignment', // blp added
 			'bold',
 			'italic',
 			'link',
